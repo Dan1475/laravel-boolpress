@@ -4,5 +4,26 @@
 // Variables
 @import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// // Bootstrap
+// @import '~bootstrap/scss/bootstrap';
+
+
+
+h1{
+  text-align: center;
+  background: purple;
+  color: white;
+}
+
+.show{
+ display: flex;
+ flex-wrap: wrap;
+ flex-direction: row;
+ justify-content: center;
+}
+.post-box{
+  width: 30%;
+  box-shadow: 2px 2px 8px -1px rgba(0,0,0,0.4);
+  text-align: center;
+  margin: 15px 15px;
+}

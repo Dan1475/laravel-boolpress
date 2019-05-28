@@ -11,10 +11,10 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-      factory(App\Category::class, 10)->create()
+      factory(App\Category::class, 30)->create()
       ->each(function($category){
 
-      $posts = App\Post::inRandomOrder()->take(rand(2 , 10))->get();
+      $posts = App\Post::inRandomOrder()->take(rand(1,10))->get();
       $category->posts()->attach($posts);
 });
 
