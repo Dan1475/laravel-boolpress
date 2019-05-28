@@ -6,8 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Post;
 use App\Category;
-
-class PostController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,11 +15,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::take(5)->get();
-      
-        return view('pages.home', compact('posts'));
-
-          }
+        //
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -51,9 +47,8 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        $post = Post::findOrFail($id);
-        $category = Category::all();
-        return view('pages.show-post', compact('post', 'category'));
+        $category = Category::findOrFail($id);
+        return view('pages.show-category-post', compact('category'))
     }
 
     /**

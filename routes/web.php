@@ -11,8 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.show-post');
-});
+// Route::get('/', function () {
+//     return view('pages.show-post');
+// });
+//
+
+Route::get('/', 'PostController@index');
 
 Route::resource('post', 'PostController');
+
+Route::get('post/{id}', 'PostController@show');
+
+// Route::get('category/{id} ', 'CategoryController@show');
