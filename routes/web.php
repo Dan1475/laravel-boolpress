@@ -20,8 +20,6 @@ Route::get('/', 'PostController@index');
 
 Route::resource('post', 'PostController');
 
-Route::get('post/{id}', 'PostController@show');
-
-Route::get('/category/{name} ', 'CategoryController@show');
+// Route::get('post/{id}', 'PostController@show');
 
 Route::resource('category', 'CategoryController');

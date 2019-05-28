@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\requests\PostRequest;
 
 use App\Post;
 use App\Category;
@@ -16,8 +17,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::take(5)->get();
-      
+        $posts = Post::take(5)->latest()->get();
+
         return view('pages.home', compact('posts'));
 
           }
@@ -29,7 +30,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+          return view('pages.create-post');
     }
 
     /**
@@ -38,9 +39,15 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
-        //
+      $validateData = $request->validated();
+
+      $post = Post::create($validateData);
+
+      return redirect('post')
+         ->with('success', 'New post was saved: ' . $post ->id);
+
     }
 
     /**

@@ -3,7 +3,7 @@
 
 
 @foreach ($categories as $category)
-  <p>{{$category->name}}</p>
+  <p> <a href="{{route('category.show', $category->name)}}">{{$category->name}}</a></p><br>
 @endforeach
 
 @stop

@@ -3,8 +3,10 @@
 
   <h1>POSTS</h1>
 
-  <div class="show">
+  <button type="button" name="button"><a href="{{route('category.index')}}"> SHOW ALL CATEGORIES </a> </button>
+  <button type="button" name="button"><a href="{{route('post.create')}}"> create new post </a> </button>
 
+  <div class="show">
 
     @foreach ($posts as $post)
 
