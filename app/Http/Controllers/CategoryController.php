@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Post;
 use App\Category;
+use App\Post;
+
 class CategoryController extends Controller
 {
     /**
@@ -15,7 +16,11 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+      $categories = Category::all();
+
+      // dd($categories);
+
+      return view('pages.show-category', compact('categories'));
     }
 
     /**
@@ -45,10 +50,17 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($name)
     {
-        $category = Category::findOrFail($id);
-        return view('pages.show-category-post', compact('category'))
+
+        $category = Category::where('name', $name)->first();;
+        // $catName = $category[0];
+        // dd($category);
+
+        $posts = Post::all();
+
+
+        return view('pages.show-category-post', compact('category'));
     }
 
     /**

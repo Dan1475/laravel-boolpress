@@ -11,11 +11,15 @@
 
   </div>
 @endforeach --}}
-@foreach ($posts as $post)
-          <li>
 
-                  {{ $post->title }} ({{ $post->id }})
-            
-          </li>
-      @endforeach
+<h1>{{$category->name}}</h1>
+
+@foreach ($category->posts as $post)
+
+<div class="box">
+  <h4>{{$post->title}}</h4>
+  <p>{{$post->content}}</p>
+</div>
+
+@endforeach
 @stop

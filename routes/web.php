@@ -22,4 +22,6 @@ Route::resource('post', 'PostController');
 
 Route::get('post/{id}', 'PostController@show');
 
-// Route::get('category/{id} ', 'CategoryController@show');
+Route::get('/category/{name} ', 'CategoryController@show');
+
+Route::resource('category', 'CategoryController');

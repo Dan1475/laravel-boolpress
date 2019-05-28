@@ -14,7 +14,7 @@ class CategorySeeder extends Seeder
       factory(App\Category::class, 30)->create()
       ->each(function($category){
 
-      $posts = App\Post::inRandomOrder()->take(rand(1,10))->get();
+      $posts = App\Post::inRandomOrder()->take(rand(1, 10))->get();
       $category->posts()->attach($posts);
 });
 
