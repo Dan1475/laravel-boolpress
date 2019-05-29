@@ -30,7 +30,10 @@ class PostController extends Controller
      */
     public function create()
     {
-          return view('pages.create-post');
+
+          $categories= Category::all();
+
+          return view('pages.create-post', compact('categories'));
     }
 
     /**
@@ -39,13 +42,18 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(PostRequest $request)
+    public function store(Request $request)
     {
-      $validateData = $request->validated();
+      $post = $request-> validate([
+          'title' => 'required',
+          'content' => 'required'
+        ]);
 
-      $post = Post::create($validateData);
+        $post  = Post::create($post);
+        $post->categories()->attach($request['categories']);
 
-      return redirect('post')
+
+      return redirect('/')
          ->with('success', 'New post was saved: ' . $post ->id);
 
     }
@@ -71,7 +79,9 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::findOrFail($id);
+        $categories = Category::all();
+        return view('pages.edit-post', compact('post', 'categories'));
     }
 
     /**
@@ -83,7 +93,20 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // $validateData = $request->validated();
+        // Post::whereId($id)->update($validateData);
+
+
+       $post = $request-> validate([
+           'title' => 'required',
+           'content' => 'required'
+         ]);
+      // dd($request->all());
+        Post::whereId($id)->update($post);
+        Post::findOrFail($id)->categories()->sync($request['categories']);
+
+
+        return redirect('/');
     }
 
     /**

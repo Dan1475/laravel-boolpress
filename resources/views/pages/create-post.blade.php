@@ -3,21 +3,40 @@
 
 
   <div class="edit">
+
     <form class="create" action="{{route('post.store')}}" method="post">
       @csrf
-      <div>
-        <label for="title">Title</label><br>
-        <input type="text" name="title" value="">
+    <div class="flex-box">
+     <div class="left-form">
+
+        <div class="form-style">
+          <label for="title">Title</label><br>
+          <input type="text" name="title" value="">
+        </div>
+
+
+        <div  class="form-style">
+          <label for="content">Content</label><br>
+          <textarea name="content" cols="40" rows="5"></textarea>
+
+        </div>
+
+        <button type="submit" name="button">SAVE NEW POST</button>
+
+
       </div>
 
+      <div  class="check-style">
+           <label for="category">Categories</label><br>
 
-      <div>
-        <label for="content">Content</label><br>
-        <textarea name="content" cols="40" rows="5"></textarea>
+           @foreach ($categories as $category)
 
-      </div>
+             <input type="checkbox" name="categories[]" value="{{$category->id}}"><label>{{$category->name}}  </label><br>
+           @endforeach
+         </div>
+       </div>
 
-      <button type="submit" name="button">SAVE NEW POST</button>
+
     </form>
 
   </div>

@@ -29,4 +29,13 @@ class PostRequest extends FormRequest
 
         ];
     }
+
+    public function messaggess(){
+
+      return [
+        "title.required" => "Devi inserire un titolo!",
+        "content.required" => "Devi inserire un content!",
+
+      ]
+    }
 }

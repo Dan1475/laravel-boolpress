@@ -4,32 +4,243 @@
 // Variables
 @import 'variables';
 
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
 // // Bootstrap
 // @import '~bootstrap/scss/bootstrap';
 
 
 
-h1{
-  text-align: center;
-  background: purple;
-  color: white;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
+
+
+.header{
+  width: 100%;
+  background: purple;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  align-items: center;
+  padding: 15px 0;
+  box-shadow: inset 0 -2px 8px -1px rgba(0,0,0,0.7);
+
+  .left{
+    display: flex;
+    width: 50%;
+    align-items: center;
+
+    i{
+      margin-right: 15px;
+    }
+
+    a{
+      color: white;
+    }
+    &:visited{
+      color: white;
+    }
+    &:hover{
+      text-decoration: line-through;
+    }
+  }
+
+
+  .right{
+    span{
+      margin-right: 15px;
+
+    }
+
+    button{
+      padding: 10px;
+      background: beige;
+      border-radius: 2%;
+      color: purple;
+      border: none;
+      box-shadow: 2px 2px 8px -1px rgba(0,0,0,0.7);
+
+
+    }
+  }
+}
+
+
+
 
 .show{
  display: flex;
  flex-wrap: wrap;
  flex-direction: row;
  justify-content: center;
-}
-.post-box{
-  width: 30%;
-  box-shadow: 2px 2px 8px -1px rgba(0,0,0,0.4);
-  text-align: center;
-  margin: 15px 15px;
-  padding: 10px;
-}
-.show-box{
 
+ .post-box{
+   width: 30%;
+   // text-align: center;
+   margin: 15px 15px;
+   padding: 10px;
+   border-bottom: 1px solid black;
+   border-right: 1px solid black;
+   .title-box{
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     margin: 10px 0;
+     a{
+       color: black;
+       &:visited{
+         color: black;
+       }
+
+       &:hover{
+         color: purple;
+       }
+     }
+     h3{
+       font-size: 25px;
+     }
+     i{
+       color: grey;
+       margin-left: 15px;
+     }
+   }
+
+   .content-box{
+     p{
+       margin: 10px 0;
+     }
+   }
+
+
+}
+}
+
+
+.show-box{
+  width: 60%;
+  margin: auto;
   text-align: center;
-  background: beige;
+  padding: 20px;
+  .title{
+
+    border-bottom: 1px solid black;
+    padding: 10px;
+  }
+
+  .content-box, .category-box{
+    padding: 15px;
+  }
+
+}
+
+
+.category{
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+
+  h1{
+    border-bottom: 1px solid black;
+    padding: 15px 0;
+  }
+  p{
+    padding: 7px;
+  }
+}
+
+
+.category-post-box{
+  text-align: center;
+  padding: 20px;
+
+  h1{
+    border-bottom: 1px solid black;
+    padding: 15px 0;
+  }
+
+  .post-box{
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .box{
+     padding: 10px;
+     width: 40%;
+    }
+  }
+
+
+}
+
+
+.edit{
+  width: 100%;
+  margin: auto;
+
+  form{
+    width: 90%;
+    margin: auto;
+
+
+
+    .flex-box{
+      display: flex;
+      justify-content: space-between;
+
+      .left-form{
+
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-start;
+       width: 60%;
+        .form-style{
+
+          padding: 15px;
+          text-align: center;
+
+
+        label{
+          font-size: 20px;
+          padding: 10px;
+
+        }
+
+        input{
+          border: none;
+          border-bottom: 1px solid black;
+          width: 100%;
+          height: 35px;
+          margin: 15px;
+        }
+
+
+        textarea{
+          width: 100%;
+          height: 250px;
+
+        }
+
+
+       }
+   }
+   }
+
+   .check-style{
+     label{
+       font-size: 20px;
+       text-align: left;
+     }
+     input{
+       margin: 5px;
+
+     }
+   }
+  }
 }

@@ -22,6 +22,8 @@
       <div class="wrapper">
 
         <header>
+          @include('elem.header')
+
 
 
         </header>
@@ -46,7 +48,7 @@
       @endif --}}
 
         <footer>
-
+                @include('elem.footer')
         </footer>
       </div>
     </body>

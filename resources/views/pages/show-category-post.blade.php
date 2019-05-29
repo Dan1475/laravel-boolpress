@@ -1,25 +1,25 @@
 @extends('layout.posts-layout')
 @section('content')
 
-{{-- @foreach ($category->posts as $post)
-  <div class="post-box">
-    <h4> <a href="{{ route('post.show', $post->id)}}">{{$post->title }}</a> </h4>
-    <p>{{$post->content}}</p>
-    @foreach ($post->categories as $category)
-      <small> <a href="{{route('post.show', $category->name)}}">{{$category->name}}</a></small><br>
-     @endforeach
 
-  </div>
-@endforeach --}}
+<div class="category-post-box">
 
 <h1>{{$category->name}}</h1>
+ <div class="post-box">
 
 @foreach ($category->posts as $post)
 
 <div class="box">
-  <h4>{{$post->title}}</h4>
+  <h2>{{$post->id}} - {{$post->title}}</h2>
   <p>{{$post->content}}</p>
+  @foreach ($post->categories as $category)
+
+  <small> <a href="{{route('category.show', $category->name)}}">{{$category->name}}</a> - </small>
+@endforeach
+
 </div>
 
 @endforeach
+</div>
+</div>
 @stop
