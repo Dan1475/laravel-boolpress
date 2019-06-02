@@ -27,7 +27,7 @@
       </div>
 
       <div  class="check-style">
-           <label for="category">Categories</label><br>
+           <label for="category">Choose categories:</label><br>
 
            @foreach ($categories as $category)
 

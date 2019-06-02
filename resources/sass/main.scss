@@ -1,0 +1,213 @@
+.container{
+  background: $color5;
+  width: 100%;
+  height: 100vh;
+.show{
+ display: flex;
+ flex-wrap: wrap;
+ flex-direction: row;
+ justify-content: center;
+
+ .post-box{
+   width: 25%;
+   background: rgba($color6, 0.1);
+   border-radius: 20px;
+   margin: 20px;
+   padding: 20px;
+   // border-bottom: 1px solid black;
+   // border-right: 1px solid black;
+   color : $color3;
+   .title-box{
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     margin: 20px 0;
+     a{
+       color: $color3;
+       &:visited{
+         color: $color3;
+       }
+
+       &:hover{
+         color: $color6;
+       }
+     }
+     h3{
+       font-size: 35px;
+     }
+     i{
+       color: $color7;
+       margin-left: 15px;
+     }
+   }
+
+   .content-box{
+     p{
+       margin: 10px 0;
+       font-size: 20px;
+     }
+     small{
+       a{
+         color: $color7;
+         &:visited{
+            color: red;
+         }
+
+       }
+     }
+   }
+
+
+}
+}
+
+
+.show-box{
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  .title{
+
+    border-bottom: 1px solid black;
+    padding: 10px;
+  }
+
+  .content-box{
+    padding: 15px;
+
+    .category-box{
+      padding: 15px;
+
+    }
+ }
+}
+
+
+.category{
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+
+  h1{
+    border-bottom: 1px solid black;
+    padding: 15px 0;
+  }
+  p{
+    padding: 7px;
+  }
+}
+
+
+.category-post-box{
+  text-align: center;
+  padding: 20px;
+
+  h1{
+    border-bottom: 1px solid black;
+    padding: 15px 0;
+  }
+
+  .post-box{
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .box{
+     padding: 10px;
+     width: 40%;
+    }
+  }
+
+
+}
+
+
+.edit{
+  width: 100%;
+  margin: auto;
+
+  form{
+    width: 90%;
+    margin: auto;
+
+
+
+    .flex-box{
+      display: flex;
+      justify-content: space-around;
+
+      .left-form{
+
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-start;
+       width: 60%;
+        .form-style{
+
+          padding: 15px;
+          text-align: center;
+
+
+
+        label{
+          font-size: 20px;
+          padding: 10px;
+
+        }
+
+        input{
+          border: none;
+          border-bottom: 1px solid black;
+          width: 100%;
+          height: 35px;
+          margin: 15px;
+          background: $color5;
+          font-size: 20px;
+
+        }
+
+
+        textarea{
+          width: 100%;
+          height: 250px;
+          font-size: 20px;
+
+
+        }
+
+
+       }
+
+       button{
+         background: $color7;
+         color: $color5;
+         border-radius: 15px;
+         font-size: 20px;
+         padding: 5px 10px;
+         border: none;
+         width: 50%;
+         margin: 15px auto;
+       }
+   }
+
+
+   .check-style{
+
+     padding: 20px;
+     label{
+       font-size: 20px;
+       text-align: left;
+
+
+     }
+     input{
+
+     }
+   }
+   }
+  }
+}
+}

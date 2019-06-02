@@ -9,7 +9,7 @@
   </div>
 
 <div class="content-box">
-  <p>{{$post->content}}</p>
+  <p id="content-text">{{$post->content}}</p>
   <div class="category-box">
 
   @foreach ($post->categories as $category)

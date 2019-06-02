@@ -27,7 +27,10 @@
 
 
         </header>
-        @yield('content')
+        <div class="container">
+
+          @yield('content')
+        </div>
         {{-- @if ($errors->any())
           <div class="alert alert-danger">
               <ul>
@@ -47,9 +50,7 @@
 
       @endif --}}
 
-        <footer>
-                @include('elem.footer')
-        </footer>
+    
       </div>
     </body>
 

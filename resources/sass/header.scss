@@ -1,0 +1,57 @@
+.header{
+  width: 100%;
+  background: $color3;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  color: $color5;
+  align-items: center;
+  padding: 15px 0;
+
+
+  .left{
+    display: flex;
+    width: 50%;
+    align-items: center;
+
+    i{
+      margin-right: 15px;
+    }
+
+    a{
+      color: $color5;
+      &:visited{
+        color: $color5;
+        }
+      &:hover{
+        text-decoration: line-through;
+      }
+    }
+  }
+
+
+  .right{
+    span{
+      margin-right: 15px;
+
+    }
+
+    button{
+      padding: 10px;
+      background: $color5;
+      border-radius: 5px;
+
+      font-weight: bold;
+      border: none;
+      a{
+        color: $color7;
+        &:hover{
+          color: $color6;
+        }
+      }
+
+
+
+    }
+  }
+}

@@ -7,8 +7,8 @@ use Faker\Generator as Faker;
 
 $factory->define(App\Post::class, function (Faker $faker) {
     return [
-      'title' => $faker ->unique()-> word,
-      'content' => $faker -> paragraph
+      'title' => $faker ->unique()-> word(3),
+      'content' => $faker -> sentence(50)
 
     ];
 

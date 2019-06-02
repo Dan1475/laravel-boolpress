@@ -11,14 +11,13 @@
 
 .header {
   width: 100%;
-  background: purple;
+  background: #202022;
   height: auto;
   display: flex;
   justify-content: space-around;
-  color: white;
+  color: #f1f3f9;
   align-items: center;
   padding: 15px 0;
-  box-shadow: inset 0 -2px 8px -1px rgba(0, 0, 0, 0.7);
 }
 
 .header .left {
@@ -32,14 +31,14 @@
 }
 
 .header .left a {
-  color: white;
+  color: #f1f3f9;
 }
 
-.header .left:visited {
-  color: white;
+.header .left a:visited {
+  color: #f1f3f9;
 }
 
-.header .left:hover {
+.header .left a:hover {
   text-decoration: line-through;
 }
 
@@ -49,103 +48,129 @@
 
 .header .right button {
   padding: 10px;
-  background: beige;
-  border-radius: 2%;
-  color: purple;
+  background: #f1f3f9;
+  border-radius: 5px;
+  font-weight: bold;
   border: none;
-  box-shadow: 2px 2px 8px -1px rgba(0, 0, 0, 0.7);
 }
 
-.show {
+.header .right button a {
+  color: #21becf;
+}
+
+.header .right button a:hover {
+  color: #0b4a77;
+}
+
+.container {
+  background: #f1f3f9;
+  width: 100%;
+  height: 100vh;
+}
+
+.container .show {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
 }
 
-.show .post-box {
-  width: 30%;
-  margin: 15px 15px;
-  padding: 10px;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
+.container .show .post-box {
+  width: 25%;
+  background: rgba(11, 74, 119, 0.1);
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+  color: #202022;
 }
 
-.show .post-box .title-box {
+.container .show .post-box .title-box {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
-.show .post-box .title-box a {
-  color: black;
+.container .show .post-box .title-box a {
+  color: #202022;
 }
 
-.show .post-box .title-box a:visited {
-  color: black;
+.container .show .post-box .title-box a:visited {
+  color: #202022;
 }
 
-.show .post-box .title-box a:hover {
-  color: purple;
+.container .show .post-box .title-box a:hover {
+  color: #0b4a77;
 }
 
-.show .post-box .title-box h3 {
-  font-size: 25px;
+.container .show .post-box .title-box h3 {
+  font-size: 35px;
 }
 
-.show .post-box .title-box i {
-  color: grey;
+.container .show .post-box .title-box i {
+  color: #21becf;
   margin-left: 15px;
 }
 
-.show .post-box .content-box p {
+.container .show .post-box .content-box p {
   margin: 10px 0;
+  font-size: 20px;
 }
 
-.show-box {
+.container .show .post-box .content-box small a {
+  color: #21becf;
+}
+
+.container .show .post-box .content-box small a:visited {
+  color: red;
+}
+
+.container .show-box {
   width: 60%;
   margin: auto;
   text-align: center;
   padding: 20px;
 }
 
-.show-box .title {
+.container .show-box .title {
   border-bottom: 1px solid black;
   padding: 10px;
 }
 
-.show-box .content-box,
-.show-box .category-box {
+.container .show-box .content-box {
   padding: 15px;
 }
 
-.category {
+.container .show-box .content-box .category-box {
+  padding: 15px;
+}
+
+.container .category {
   width: 100%;
   text-align: center;
   padding: 20px;
 }
 
-.category h1 {
+.container .category h1 {
   border-bottom: 1px solid black;
   padding: 15px 0;
 }
 
-.category p {
+.container .category p {
   padding: 7px;
 }
 
-.category-post-box {
+.container .category-post-box {
   text-align: center;
   padding: 20px;
 }
 
-.category-post-box h1 {
+.container .category-post-box h1 {
   border-bottom: 1px solid black;
   padding: 15px 0;
 }
 
-.category-post-box .post-box {
+.container .category-post-box .post-box {
   padding: 15px;
   width: 100%;
   display: flex;
@@ -153,62 +178,76 @@
   flex-wrap: wrap;
 }
 
-.category-post-box .post-box .box {
+.container .category-post-box .post-box .box {
   padding: 10px;
   width: 40%;
 }
 
-.edit {
+.container .edit {
   width: 100%;
   margin: auto;
 }
 
-.edit form {
+.container .edit form {
   width: 90%;
   margin: auto;
 }
 
-.edit form .flex-box {
+.container .edit form .flex-box {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-.edit form .flex-box .left-form {
+.container .edit form .flex-box .left-form {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   width: 60%;
 }
 
-.edit form .flex-box .left-form .form-style {
+.container .edit form .flex-box .left-form .form-style {
   padding: 15px;
   text-align: center;
 }
 
-.edit form .flex-box .left-form .form-style label {
+.container .edit form .flex-box .left-form .form-style label {
   font-size: 20px;
   padding: 10px;
 }
 
-.edit form .flex-box .left-form .form-style input {
+.container .edit form .flex-box .left-form .form-style input {
   border: none;
   border-bottom: 1px solid black;
   width: 100%;
   height: 35px;
   margin: 15px;
+  background: #f1f3f9;
+  font-size: 20px;
 }
 
-.edit form .flex-box .left-form .form-style textarea {
+.container .edit form .flex-box .left-form .form-style textarea {
   width: 100%;
   height: 250px;
+  font-size: 20px;
 }
 
-.edit form .check-style label {
+.container .edit form .flex-box .left-form button {
+  background: #21becf;
+  color: #f1f3f9;
+  border-radius: 15px;
+  font-size: 20px;
+  padding: 5px 10px;
+  border: none;
+  width: 50%;
+  margin: 15px auto;
+}
+
+.container .edit form .flex-box .check-style {
+  padding: 20px;
+}
+
+.container .edit form .flex-box .check-style label {
   font-size: 20px;
   text-align: left;
-}
-
-.edit form .check-style input {
-  margin: 5px;
 }
 
