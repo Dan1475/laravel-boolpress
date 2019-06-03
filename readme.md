@@ -12,7 +12,7 @@ In this case a test database was created by inserting fake data into the tables.
 
 Only the last 5 posts created are shown on the homepage.
 
- ![](screenshot.png)
+ ![](screenshot.PNG)
 
 
 ## Create new posts

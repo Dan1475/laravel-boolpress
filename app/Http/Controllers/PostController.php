@@ -7,6 +7,7 @@ use App\Http\requests\PostRequest;
 
 use App\Post;
 use App\Category;
+use App\Author;
 
 class PostController extends Controller
 {
@@ -17,9 +18,11 @@ class PostController extends Controller
      */
     public function index()
     {
+        $categories = Category::all();
+        $authors = Author::all();
         $posts = Post::take(5)->latest()->get();
 
-        return view('pages.home', compact('posts'));
+        return view('pages.home', compact( 'authors','categories','posts'));
 
           }
 
@@ -118,5 +121,34 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    function search(Request $request){
+
+      $title = $request -> title;
+      $content = $request -> content;
+      $category = $request-> category;
+      $author = $request-> author;
+
+      $query = Post::query();
+      if ($title) {
+        $query = $query ->where('title', 'LIKE', '%' . $title . '%');
+      }
+      if ($content) {
+        $query = $query ->where('content', 'LIKE', '%' . $content . '%');
+      }
+      if ($author) {
+        $query = $query ->where('author_id', $author);
+      }
+
+      $posts = $query ->get();
+
+      $categories = Category::all();
+      $authors = Author::all();
+
+      return view('pages.home', compact( 'authors','categories','posts'));
+
+
     }
 }

@@ -23,3 +23,6 @@ Route::resource('post', 'PostController');
 // Route::get('post/{id}', 'PostController@show');
 
 Route::resource('category', 'CategoryController');
+
+
+Route::get('/search', 'PostController@search')->name('search');

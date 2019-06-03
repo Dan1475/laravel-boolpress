@@ -1,8 +1,46 @@
 @extends('layout.posts-layout')
 @section('content')
 
+  <form action="{{route('search')}}" method="get">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" name="title" value="">
+    </div>
+    <div class="form-group">
+      <label for="content">Content</label>
+      <input type="text" name="content" value="">
+    </div>
+    <div class="form-group">
+      <label for="category">Category</label>
+      <select class="" name="category">
+        <option value="">Choose Category</option>
+        @foreach ($categories as $category)
+          <option value="{{$category->id}}">
+            {{$category->name}}
+          </option>
+        @endforeach
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="author">Authors</label>
+      <select class="" name="author">
+        <option value="">Choose Author</option>
+        @foreach ($authors as $author)
+          <option value="{{$author->id}}">
+            {{$author->username}}
+          </option>
+        @endforeach
+      </select>
+    </div>
+
+    <input type="submit" name="" value="SEARCH">
+
+
+
+  </form>
 
   <div class="show">
+
 
     @foreach ($posts as $post)
 
