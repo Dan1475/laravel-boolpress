@@ -9,12 +9,16 @@ class Post extends Model
   protected $fillable = [
 
     'title',
-    'content',
-    'categories_id'
+    'content'
+
   ];
 
   function categories(){
 
     return $this->belongsToMany(Category::class);
+  }
+
+  function author(){
+    return $this->belongsTo(Author::class);
   }
 }

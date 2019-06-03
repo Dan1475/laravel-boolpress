@@ -15,6 +15,11 @@
       <div class="content-box">
 
        <p>{!!$post->content!!}</p>
+       <div class="author-box">
+
+
+       <small>Written By: <br>{{$post->author->username}}</small>
+      </div>
         @foreach ($post->categories as $category)
           <small> <a href="{{route('category.show', $category->name)}}">{{$category->name}}</a> - </small>
          @endforeach

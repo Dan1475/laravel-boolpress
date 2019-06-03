@@ -9,13 +9,13 @@
  justify-content: center;
 
  .post-box{
+  position: relative;
    width: 25%;
    background: rgba($color6, 0.1);
    border-radius: 20px;
    margin: 20px;
    padding: 20px;
-   // border-bottom: 1px solid black;
-   // border-right: 1px solid black;
+
    color : $color3;
    .title-box{
      display: flex;
@@ -42,16 +42,26 @@
    }
 
    .content-box{
+
      p{
        margin: 10px 0;
        font-size: 20px;
+
+
+     }
+
+     .author-box{
+       position: absolute;
+       bottom: 15px;
+       right: 15px;
+       small{
+         color: $color6;
+       }
      }
      small{
        a{
          color: $color7;
-         &:visited{
-            color: red;
-         }
+      
 
        }
      }

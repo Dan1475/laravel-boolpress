@@ -76,6 +76,7 @@
 }
 
 .container .show .post-box {
+  position: relative;
   width: 25%;
   background: rgba(11, 74, 119, 0.1);
   border-radius: 20px;
@@ -117,12 +118,18 @@
   font-size: 20px;
 }
 
-.container .show .post-box .content-box small a {
-  color: #21becf;
+.container .show .post-box .content-box .author-box {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
 }
 
-.container .show .post-box .content-box small a:visited {
-  color: red;
+.container .show .post-box .content-box .author-box small {
+  color: #0b4a77;
+}
+
+.container .show .post-box .content-box small a {
+  color: #21becf;
 }
 
 .container .show-box {
