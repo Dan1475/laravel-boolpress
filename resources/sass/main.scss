@@ -1,7 +1,41 @@
 .container{
   background: $color5;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+
+.search-box{
+  padding: 25px;
+  width: 40%;
+  margin: auto;
+  // text-align: center;
+  form{
+    text-align: center;
+    .form-group{
+
+      padding: 10px;
+      label{
+        font-size: 20px;
+      }
+      input, select{
+        width: 50%;
+        height: 30px;
+        font-size: 18px;
+        text-align: center;
+      }
+
+
+    }
+
+    #search-btn{
+      width: 150px;
+      padding: 10px;
+      background: $color7;
+      color: $color5;
+      border: none;
+      box-shadow: 5px 5px 10px -6px rgba(0,0,0,0.75);
+    }
+  }
+}
 .show{
  display: flex;
  flex-wrap: wrap;
@@ -61,7 +95,7 @@
      small{
        a{
          color: $color7;
-      
+
 
        }
      }
